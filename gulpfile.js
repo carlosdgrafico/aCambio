@@ -1,8 +1,9 @@
 const gulp = require ('gulp');
 const webserver = require ('gulp-webserver');
+const imagenes = require ('gulp-imagemin');
 const sass = require ('gulp-sass');
-const autoprefixes = require ('gulp-autoprefixes');
-const watch = require ('gulp-whatch');
+const autoprefixer = require ('gulp-autoprefixer');
+const watch = require ('gulp-watch');
 const concat = require ('gulp-concat');
 const uglify = require ('gulp-uglify');
 const pug = require ('gulp-pug');
@@ -50,16 +51,16 @@ gulp.task('js', function(){
 
 gulp.task('concatenar', ['js'], function(){
 	gulp.src(rutas.js.watch)
-	.pipe(concat(rutas.js.main))
+	.pipe(concat('main.js'))
 	//.pipe(uglify()) // minificado de js
-	.pipe(gul.dest(rutas.js.output))
+	.pipe(gulp.dest(rutas.js.output))
 });
 
 
 
 gulp.task('imagenes', function(){
    gulp.src('./app/img/*.{png,jpg,gif,jpeg,svg}')
-   .pipe(imagemin({
+   .pipe(imagenes({
         interlaced: true,
         progressive: true,
         optimizationLevel: 2,
@@ -87,7 +88,7 @@ gulp.task('sass', function(){
 		// outputStyle: 'compressed',
     	sourceComments: true
 	}))
-	.pipe(autoprefixes({
+	.pipe(autoprefixer({
 		versions:['last 2 browsers']
 	}))
 	.pipe(gulp.dest(rutas.scss.output))
@@ -101,7 +102,7 @@ gulp.task('fonts', function(){
 });
 
 
-gulp.watch('watch', function(){
+gulp.task('watch', function(){
 	gulp.watch(rutas.scss.watch, ['sass']);
   	gulp.watch(rutas.pug.watch, ['pug']);
   	gulp.watch(rutas.js.watch, ['concatenar']);
@@ -114,7 +115,7 @@ gulp.task('acambio', [
 	'sass',
 	'pug',
 	'concatenar',
-	'font',
+	'fonts',
 	'imagenes',
 	'watch'
 
