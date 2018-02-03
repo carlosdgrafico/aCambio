@@ -19,6 +19,7 @@
     "gulp-webserver": "^0.9.1",
     "jquery-validation": "^1.17.0",
     "materialize": "^1.0.0",
+    "materialize-css": "^0.100.2",
     "owl.carousel": "^2.2.0"
   }
 }
