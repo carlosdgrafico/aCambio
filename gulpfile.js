@@ -28,6 +28,7 @@ const rutas = {
      	watch: './app/js/**/*.js',
     	output: './dist/js/'
 	}
+
 }
 
 
@@ -102,6 +103,12 @@ gulp.task('fonts', function(){
 });
 
 
+gulp.task('librerias-build', function(){
+	gulp.src('./app/lib' + '/**' + '/*.*')
+	.pipe(gulp.dest('./dist/lib'))
+});
+
+
 gulp.task('watch', function(){
 	gulp.watch(rutas.scss.watch, ['sass']);
   	gulp.watch(rutas.pug.watch, ['pug']);
@@ -116,6 +123,7 @@ gulp.task('acambio', [
 	'pug',
 	'concatenar',
 	'fonts',
+	'librerias-build',
 	'imagenes',
 	'watch'
 
