@@ -1,23 +1,26 @@
 header.header
-
-   figure.header--logotipo
-      img.logotipo--img(src="../img/logotipo-aCambio.png", alt="Logotipo aCambio")
-      
-   ul.header--menu
-      li.header--menu--item
-         a(href="javascript:;") Qué hacemos
-      li.header--menu--item
-         a(href="javascript:;") Cómo funciona
-      li.header--menu--item
-         a(href="javascript:;") Quiénes somos
-      li.header--menu--item
-         a(href="javascript:;") Colaboradores
-      li.header--menu--item
-         a(href="javascript:;") Blog
-      li.header--menu--item
-         a(href="javascript:;") Contacto
-   
-   .header--menu--user
-      img(src="../img/user.jpg", alt="Fotografica del usuario que ha iniciado sesión")
+   .row.u-resetRow
+      .col.s2
+         figure.logotipo.header__logotipo
+            img.logotipo__img(src="../img/logotipo-aCambio-white.png", alt="Logotipo aCambio")
+      .col.s10.u-right
+         ul.header__menu
+            li.header__item
+               a.header__link(href="javascript:;") ¿Qué hacemos?
+            li.header__item
+               a.header__link(href="javascript:;") ¿Cómo funciona?
+            li.header__item
+               a.header__link.header__link--active(href="javascript:;") ¿Quiénes somos?
+            li.header__item
+               a.header__link(href="javascript:;") Colaboradores
+            li.header__item
+               a.header__link(href="javascript:;") Blog
+            li.header__item
+               a.header__link(href="javascript:;") Contacto
+         
+         a.header__usuario(href="javascript:;")
+            span.header__usuario-border
+            figure.header__usuario-foto
+               img(src="../img/user.jpg", alt="Fotografica del usuario que ha iniciado sesión")
 
    
