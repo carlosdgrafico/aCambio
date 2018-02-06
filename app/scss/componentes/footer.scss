@@ -1,0 +1,70 @@
+.footer{
+   background-color: #EFEFEF;
+   padding: 2em 0 0 0;
+
+   &__menu{
+      text-align: left;
+   }
+
+   &__menu-titulo{
+      color: $primary-color;
+      @include font-size(16);
+      @include line-height(19);
+      &:before{
+         background-color: $secondary-color;
+         content: '';
+         display: inline-block;
+         height: 2px;
+         margin: 0 8px 5px 0;
+         width: 20px;
+      }
+   }
+
+   &__link{
+      color: $text-color-medium;
+      @include font-size(14);
+      @include line-height(24);
+      transition: all .3s ease-out;
+
+      &:hover{
+         color: $text-color;
+      }
+   }
+
+   &__logotipo{
+      display: inline-block;
+      vertical-align: middle;
+      width: 230px;
+
+      &:last-child{
+         margin-left: 4em;
+      }
+   }
+
+   &__copy{
+      background-color: #E5E5E5;
+      margin-top: 2em;
+      overflow: hidden;
+      padding:1em 0;
+   }
+
+   &__legal{
+      color: $primary-color;
+      @include font-size(14);
+      @include line-height(17);
+   }
+
+   &__social{
+      text-align: right;
+   }
+
+   &__social-icon{
+      color: $primary-color;
+      @include font-size(20);
+      margin-left: 1em;
+      transition: all .3s ease-out;
+      &:hover{
+         color: $secondary-color;
+      }
+   }
+}
