@@ -17,6 +17,8 @@
 
 .titulo{
    text-align: left;
+   margin-bottom: 4em;
+
    &__name{
       color: $text-color;
       @include font-size(36);
@@ -31,6 +33,12 @@
          margin: 0 .5em .2em 0;
          width: 40px;
       }
+   }
+
+   &__icon{
+      color: $secondary-color;
+      @include font-size(28);
+      margin-left: 1em;
    }
 
    &__detalle{
