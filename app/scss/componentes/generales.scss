@@ -15,16 +15,40 @@
 
 }
 
+.titulo{
+   &__name{
+      color: $text-color;
+      @include font-size(36);
+      @include line-height(44);
+      font-weight: 300;
+      margin: 0 0 1em 0;
+      &:before{
+         background-color: $secondary-color;
+         content: '';
+         display: inline-block;
+         height: 2px;
+         margin: 0 .5em .2em 0;
+         width: 40px;
+      }
+   }
+
+   &__detalle{
+      color: $text-color-medium;
+      @include font-size(16);
+      @include line-height(19);
+   }
+}
+
 
 
 /* setting del carrousel */
-.owl-frases{
+.owl-frases, .owl-testimonios{
    display: inline-block !important;
 	position: relative;
 	z-index: 1;
 
    .item{
-      padding: .5em 0 1em 0;
+      padding: .5em .5em 1em .5em;
    }
 
 	.owl-nav {
@@ -51,6 +75,24 @@
 			&.active {
 				background-color: #708191;
 				border: 1px solid #708191;
+			}
+		}
+	}
+}
+
+.owl-testimonios{
+   .owl-dots {
+		right: 0;
+      left: 0;
+      text-align: center;
+
+		.owl-dot {
+			background-color: #D8D8D8;
+			border: 1px solid #D8D8D8;
+
+			&.active {
+				background-color: #99A7B6;
+				border: 1px solid #99A7B6;
 			}
 		}
 	}
