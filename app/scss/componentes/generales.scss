@@ -16,6 +16,7 @@
 }
 
 .titulo{
+   text-align: left;
    &__name{
       color: $text-color;
       @include font-size(36);
@@ -36,6 +37,29 @@
       color: $text-color-medium;
       @include font-size(16);
       @include line-height(19);
+   }
+}
+
+
+.titulo--center{
+   text-align: center;
+
+   .titulo__name{
+      margin: 0 0 1em 0;
+      position: relative;
+
+      &:before{
+         margin: 0 auto;
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: -.5em;
+         width: 100px;
+      }
+   }
+
+   .titulo__detalle{
+      margin-bottom: 2em;
    }
 }
 

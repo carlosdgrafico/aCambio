@@ -1,0 +1,56 @@
+.como-funciona{
+   background-color: $primary-color;
+   padding: 7em;
+
+   .titulo{
+      margin-bottom: 4em;
+      &__name{
+         color: #fff;
+         &:before{
+            background-color: #fff;
+         }
+      }
+   }
+}
+
+.paso{
+   margin: 4em 0;
+
+   &__icon{
+      color: $secondary-color;
+      display: inline-block;
+      @include font-size(47);
+   }
+
+   &__info{
+      display: inline-block;
+      margin: 0 0 0 1em;
+      vertical-align: top;
+      width: 80%;
+   }
+
+   &__titulo{
+      color: #fff;
+      @include font-size(18);
+      @include line-height(22);
+      margin: .5em 0 1.5em 0;
+      &:before{
+         background-color: $secondary-color;
+         content: '';
+         display: inline-block;
+         height: 2px;
+         margin: 0 .8em .2em 0;
+         width: 40px;
+      }
+   }
+
+   &__detalle{
+      color: rgba(255,255,255,.5);
+      @include font-size(16);
+      @include line-height(19);
+   }
+
+   &__boton{
+      margin-top: 3em;
+   }
+}
