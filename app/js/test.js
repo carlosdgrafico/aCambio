@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-   $('.owl-frases').owlCarousel({
+   $('.owl-frases, .owl-testimonios').owlCarousel({
       // animateOut: 'slideOutDown',
       animateIn: 'flipInX',
 		loop: true,
