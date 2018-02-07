@@ -1,0 +1,22 @@
+.beneficios{
+   padding: 7em 0;
+
+   .boton{
+      margin-top: 8em;
+   }
+}
+
+
+.beneficio{
+   margin-top: 1em;
+   &__titulo{
+      @extend .paso__titulo;
+      color: $primary-color;
+      margin: 1.5em 0 1em 0;
+   }
+   &__detalle{
+      color: $text-color-medium;
+      @include font-size(16);
+      @include line-height(19);
+   }
+}
