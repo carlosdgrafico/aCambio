@@ -60,7 +60,7 @@ gulp.task('concatenar', ['js'], function(){
 
 
 gulp.task('imagenes', function(){
-   gulp.src('./app/img/*.{png,jpg,gif,jpeg,svg}')
+   gulp.src('./app/img/**/*.{png,jpg,gif,jpeg,svg}')
    .pipe(imagenes({
         interlaced: true,
         progressive: true,

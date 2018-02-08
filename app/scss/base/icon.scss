@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-add:before {
+  content: "\e90e";
+}
+.icon-corazon-color:before {
+  content: "\e90f";
+}
+.icon-emoticon-color:before {
+  content: "\e910";
+}
 .icon-corazon:before {
   content: "\e900";
 }
