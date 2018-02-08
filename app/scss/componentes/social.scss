@@ -1,6 +1,5 @@
 .social{
    background-color: #EFEFEF;
-   margin-right: 3em;
    padding: 2em 0;
    text-align: center;
 
@@ -14,8 +13,9 @@
    }
 
    &__accesos{
-      text-align: right;
       display: inline-block;
+      margin-right: 3em;
+      text-align: right;
       vertical-align: middle;
    }
 
