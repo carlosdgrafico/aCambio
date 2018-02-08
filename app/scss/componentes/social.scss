@@ -1,0 +1,35 @@
+.social{
+   background-color: #EFEFEF;
+   margin-right: 3em;
+   padding: 2em 0;
+   text-align: center;
+
+   &__text{
+      color: $text-color-medium;
+      display: inline-block;
+      @include font-size(18);
+      @include line-height(22);
+      margin: 0 10em;
+      vertical-align: middle;
+   }
+
+   &__accesos{
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle;
+   }
+
+   &__icon{
+      color: $primary-color;
+      @include font-size(20);
+      margin-left: 1em;
+      transition: all .3s ease-out;
+
+      &:first-child{
+         margin-left: 0;
+      }
+      &:hover{
+         color: $secondary-color;
+      }
+   }
+}
