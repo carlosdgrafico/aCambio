@@ -2,6 +2,10 @@
    background-color: $primary-color;
    padding: 7em;
 
+   @media(max-width: 480px){
+      padding: 3em 0;
+   }
+
    .titulo__name{
       color: #fff;
       &:before{
@@ -13,10 +17,18 @@
 .paso{
    margin: 4em 0;
 
+   @media(max-width: 480px){
+      margin: 2em 0;
+   }
+
    &__icon{
       color: $secondary-color;
       display: inline-block;
       @include font-size(47);
+
+      @media(max-width: 768px){
+         @include font-size(22);
+      }
    }
 
    &__info{
@@ -39,15 +51,29 @@
          margin: 0 .8em .2em 0;
          width: 40px;
       }
+
+      @media(max-width: 768px){
+         @include font-size(16);
+         @include line-height(19);
+         &:before{
+            width: 20px;
+         }
+      }
    }
 
    &__detalle{
       color: rgba(255,255,255,.5);
       @include font-size(16);
       @include line-height(19);
+
+      @media(max-width: 768px){
+         @include font-size(14);
+         @include line-height(17);
+      }
    }
 
    &__boton{
       margin-top: 3em;
+      display: none;
    }
 }

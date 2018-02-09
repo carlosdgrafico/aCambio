@@ -10,6 +10,16 @@
       @include line-height(22);
       margin: 0 10em;
       vertical-align: middle;
+
+      @media(max-width: 768px){
+         @include font-size(14);
+         @include line-height(17);
+         margin: 0 4em;
+      }
+
+      @media(max-width: 480px){
+         display: none;
+      }
    }
 
    &__accesos{
@@ -17,6 +27,12 @@
       margin-right: 3em;
       text-align: right;
       vertical-align: middle;
+
+      @media(max-width: 480px){
+         display: block;
+         margin: 1em auto 0 auto;
+         text-align: center;
+      }
    }
 
    &__icon{

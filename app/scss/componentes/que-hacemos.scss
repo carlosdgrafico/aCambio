@@ -1,5 +1,9 @@
 .que-hacemos{
    padding: 7em 0;
+
+   @media(max-width: 480px){
+      padding: 3em 0;
+   }
 }
 
 .testimonios{
@@ -23,6 +27,11 @@
       font-style: italic;
       vertical-align: top;
       width: 70%;
+
+      @media(max-width: 768px){
+         @include font-size(14);
+         @include line-height(16);
+      }
    }
 
    &__firma{
@@ -40,5 +49,9 @@
       width: 100%;
       max-width: 840px;
 
+   }
+
+   @media(max-width: 480px){
+      margin-top: 4em;
    }
 }

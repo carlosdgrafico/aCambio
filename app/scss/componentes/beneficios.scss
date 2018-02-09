@@ -5,6 +5,14 @@
       margin-top: 8em;
    }
 
+   @media(max-width: 768px){
+      padding-top: 0;
+
+      .boton{
+         margin-top: 6em;
+      }
+   }
+
 }
 
 /* Edita el background de los manejadores de la galeria */
@@ -19,6 +27,10 @@
 
 .beneficio{
    margin-top: 1em;
+
+   @media(max-width: 480px){
+      margin-bottom: 2em;
+   }
 
    &__link{
       overflow: hidden;
@@ -79,5 +91,10 @@
       color: $text-color-medium;
       @include font-size(16);
       @include line-height(19);
+
+      @media(max-width: 768px){
+         @include font-size(14);
+         @include line-height(17);
+      }
    }
 }
