@@ -33,6 +33,8 @@
       left: 0;
       text-align: center;
 
+     -vendor-animation-iteration-count: infinite;
+
       @media(max-width: 768px){
          left: 30px;
       }
