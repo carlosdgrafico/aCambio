@@ -19,9 +19,9 @@ $(document).ready(function(){
 		$(this).addClass('animated bounce');
 	});
 
-   $('.banner__scroll').mouseleave(function(){
-		$(this).removeClass('animated bounce');
-	});
+   // $('.banner__scroll').mouseleave(function(){
+	// 	$(this).removeClass('animated bounce');
+	// });
 
 
    $(window).on('scroll', function(){
