@@ -38,7 +38,7 @@
       }
 
       @media(max-width: 480px){
-         display: none;
+         display: none !important;
       }
 
       &:before, &:after{
