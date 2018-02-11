@@ -7,17 +7,17 @@ section#contacto.contacto
 					p.titulo__detalle “Envianos tus datos y nosotros nos comunicaremos contigo” 
 			.col.s12.m5
 				.formulario.wow.slideInLeft(data-wow-delay=".1s")
-					form(name='formulario' method='post' action='')
+					form#formulario(name='formulario' method='post' action='contacto.php' enctype="multipart/form-data")
 						.input-field
-							input.validate(type='text' name='nombre')
+							input#nombre.validate(type='text' name='nombre')
 							label(for='nombre') Nombre
 
 						.input-field
-							input.validate(type='email' name='email')
+							input#email.validate(type='email' name='email')
 							label(for='email' data-error="ingrese una direccion valida") Correo electrónico
 
 						.input-field
-							input.validate(type='tel' name='telefono' data-length="9")
+							input#tel.validate(type='tel' name='telefono' data-length="9")
 							label(for='telefono' data-error="ingresar un numero valido") Teléfono de contacto
 
 						button.formulario__boton.boton.waves-effect(type="submit") 
